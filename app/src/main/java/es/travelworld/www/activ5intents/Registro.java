@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import es.travelworld.www.activ5intents.databinding.ActivityRegistroBinding;
 
-public class Registro extends AppCompatActivity {
+public class Registro extends GestionMenus {
 
 
 
@@ -27,6 +27,14 @@ public class Registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding =ActivityRegistroBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        //aqui coloco la informacion del toolbar para que sea visible en esta pantalla//
+        setActionBar(findViewById(R.id.toolbar));
+        getActionBar().setTitle("REGISTRO");
+
+        Bundle bundle=getIntent().getBundleExtra("datobundle");
+        Usuario usuario=(Usuario)bundle.getSerializable("datousuario");
+        Usuario usuario1=(Usuario)bundle.getSerializable("datocontrasena");//es correcto poner los dos usuarios?//
+        binding.setUser(usuario);
 
 
 
@@ -47,13 +55,6 @@ public class Registro extends AppCompatActivity {
                     Bundle datousuariobundle= getIntent().getBundleExtra("datousuariobundle");
                     Bundle datocontrasenabundle= getIntent().getBundleExtra("datocontrasenabundle");
 
-                    Usuario usuario= (Usuario)datousuariobundle.getSerializable("datousuario");
-                    Usuario usuario1= (Usuario)datocontrasenabundle.getSerializable("datocontraseña");
-
-                    //tengo que hacer dos binding? o podría hacerlo en una sola línea de código?//
-                    //binding.btMeapunto.setText(datousuario);//
-                    //binding.btMeapunto.setText(datocontrasena);//
-                    binding.setUser(usuario);
 
                     Toast.makeText(this,"Registro realizado correctamente", Toast.LENGTH_SHORT).show();
                     startActivity(intentVolverMain);
