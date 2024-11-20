@@ -16,7 +16,10 @@ public class Usuario implements Serializable {
         this.apellido = apellido;
         this.edades = edades;
     }
-
+    public Usuario(String datousuario, String datocontrasena) {
+        this.datousuario = datousuario;
+        this.datocontrasena = datocontrasena;
+    }
     @Override
     public String toString() {
         return "Usuario{" +

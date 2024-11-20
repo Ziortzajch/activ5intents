@@ -31,12 +31,6 @@ public class Registro extends GestionMenus {
         setActionBar(findViewById(R.id.toolbar));
         getActionBar().setTitle("REGISTRO");
 
-        Bundle bundle=getIntent().getBundleExtra("datobundle");
-        Usuario usuario=(Usuario)bundle.getSerializable("datousuario");
-        Usuario usuario1=(Usuario)bundle.getSerializable("datocontrasena");//es correcto poner los dos usuarios?//
-        binding.setUser(usuario);
-
-
 
         //aqui quiero recoger los datos de la pag registro a través del botón me apunto//
         binding.btMeapunto.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +50,7 @@ public class Registro extends GestionMenus {
                     Bundle datocontrasenabundle= getIntent().getBundleExtra("datocontrasenabundle");
 
 
-                    Toast.makeText(this,"Registro realizado correctamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(view.getContext(), "Registro realizado correctamente", Toast.LENGTH_SHORT).show();
                     startActivity(intentVolverMain);
                     finish();
 

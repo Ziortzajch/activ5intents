@@ -61,6 +61,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
                             android:drawableEnd="@drawable/lock"
+                            android:text="@{user.datocontrasena}"
                             android:inputType="textPassword" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,7 +82,7 @@
                             android:id="@+id/textLogin"
                             android:layout_width="match_parent"
                             android:layout_height="58dp"
-                            android:text=""
+                            android:text="@{user.datousuario}"
                             android:inputType="textPersonName" />
 
                 </com.google.android.material.textfield.TextInputLayout>

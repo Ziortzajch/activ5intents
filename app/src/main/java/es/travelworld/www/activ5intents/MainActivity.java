@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 String datousuario= binding.textLogin.getText().toString();
                 String datocontrasena=binding.textPassword.getText().toString();
 
-                Usuario usuario= new Usuario(String datousuario);//aqui no entiendo porque no me reconoce datousuario cuando lo tengo nombrado en la clase Usuario//
-                Usuario usuario1=new Usuario(String datocontrasena);
+                Usuario usuario= new Usuario(datousuario,datocontrasena);
 
 
                 //Aquí quiero llamar al segundo activity Registro//
@@ -47,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentIrRegistro);
 
                 Bundle bundle= new Bundle();
-                // porque tengo que poner el bundle aqui tambien ?//
                 bundle.putSerializable("datousuario",usuario);//no entiendo que es lo que hay que poner "" //
                 bundle.putSerializable("datocontrasena",usuario);
                 //con este intent quiero relacionar los datos con la pag registro.//
