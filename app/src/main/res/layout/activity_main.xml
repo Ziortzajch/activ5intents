@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <data>
+                <variable
+                    name="user"
+                    type="es.travelworld.www.activ5intents.Usuario" />
+
+        </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+                <ImageView
+                    android:id="@+id/ivnomada"
+                    android:layout_width="361dp"
+                    android:layout_height="339dp"
+                    android:contentDescription="esta es la pag ppl"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.04"
+                    app:srcCompat="@drawable/nomada" />
+
+                <TextView
+                    android:id="@+id/tvLogin2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="376dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Login"
+                    android:textSize="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutPassword"
+                    android:layout_width="343dp"
+                    android:layout_height="69dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="496dp"
+                    android:layout_marginEnd="32dp"
+                    android:hint="Password"
+                    app:boxBackgroundMode="outline"
+                    android:text=""
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:drawableEnd="@drawable/lock"
+                            android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutLogin"
+                    android:layout_width="343dp"
+                    android:layout_height="69dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="428dp"
+                    android:layout_marginEnd="32dp"
+                    android:hint="Login"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="58dp"
+                            android:text=""
+                            android:inputType="textPersonName" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btLogin"
+                    android:layout_width="343dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="576dp"
+                    android:layout_marginEnd="32dp"
+                    android:enabled="false"
+                    android:backgroundTint="#232121"
+                    android:drawableRight="@drawable/baselinearrow"
+                    android:drawableTint="#FBF8F8"
+                    android:text="Login"
+                    app:cornerRadius="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvGetNew"
+                    android:layout_width="118dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="668dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="3dp"
+                    android:clickable="true"
+                    android:minHeight="48dp"
+                    android:text="Forgot password"
+                    app:layout_constraintBottom_toTopOf="@+id/tvCreateNew"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.183"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.521" />
+
+                <Button
+                    android:id="@+id/btGetNew"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="129dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="636dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Get New"
+                    android:textColor="@color/black"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvGetNew"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvCreateNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="696dp"
+                    android:layout_marginEnd="32dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="48dp"
+                    android:text="Do you have an account?"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.145"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btCreateNew"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="684dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Create New"
+                    android:textColor="@color/black"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvCreateNew"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
