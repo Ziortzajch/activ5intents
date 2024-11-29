@@ -7,11 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".Registro">
 
-
-        <include
-            //aqui cuando hago el layout se suporpenen las dos xml (del registro y de la home)//
-            />
-
         <ImageView
             android:id="@+id/iv_registro"
             android:layout_width="213dp"
